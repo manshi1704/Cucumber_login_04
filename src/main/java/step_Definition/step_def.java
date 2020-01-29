@@ -1,9 +1,9 @@
 package step_Definition;
 
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.java.en.Given;
@@ -41,14 +41,14 @@ public class step_def {
 	driver.findElement(By.name("password")).click();
 	driver.findElement(By.name("password")).sendKeys(password);
 	driver.findElement(By.name("Login")).click();
-//	driver.findElement(By.linkText(" SignOut")).getText();
+//String d=	driver.findElement(By.linkText("SignOut")).getText().trim();
 	//Assert.assertEquals(" Sign Out", "driver.findElement(By.linkText(\" SignOut\")).getText()");
 	}
 
 
 	@Then("Message displayed Login Successfully")
 	public void message_displayed_Login_Successfully() {
-		Assert.assertEquals(" Sign Out", "driver.findElement(By.linkText(\" SignOut\")).getText()");
+		Assert.assertEquals("Sign Out", "driver.findElement(By.linkText(\"SignOut\")).getText().trim()");
 	}
 
 
